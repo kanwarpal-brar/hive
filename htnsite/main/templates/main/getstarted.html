@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% load static %}
+   <link rel="stylesheet" href="{% static "css/tailwind/tailwind.min.css" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-tailwind.png" %}">
+    <script src="{% static "js/main.js" %}"></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+    <script src="{% static "js/form.js" %}"></script>
+     <nav class="flex flex-wrap items-center justify-between p-4">
+        <div class="flex flex-shrink-0"><a class="text-xl text-yellow-400 font-semibold font-heading" href="/">Hive</a></div>
+        <div class="block lg:hidden">
+          <button class="navbar-burger flex items-center py-2 px-3 text-yellow-400 rounded border border-yellow-400">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="navbar-menu hidden lg:flex lg:flex-grow lg:items-center w-full lg:w-auto">
+          <div class="ml-auto"><a class="block lg:inline-block mt-4 lg:mt-0 lg:mr-8 text-black-900 hover:text-yellow-400" href="/faq">FAQ</a><a class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-yellow-400 hover:bg-yellow-500 font-semibold rounded shadow" href="/getstarted">Get Started</a>
+          <a class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-yellow-400 hover:bg-yellow-500 font-semibold rounded shadow" href="/contribute">Contribute</a></div>
+        </div>
+      </nav>
+    <div class="container mx-auto px-80"> 
+      <form action="#" method="post">
+      <section class="py-12 px-4 text-center">
+        <div class="w-full max-w-2xl mx-auto">
+          <h2 class="text-5xl mt-2 mb-6 leading-tight font-semibold font-heading">Customize your dataset</h2>
+        </div>
+      </section>
+      <div class="datasetRequestForm">
+        <div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
+          <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="">Name Your Dataset</label>
+              <input class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" type="text" id="datasetName" placeholder="MyDataset"> <!---->
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="">Business Name</label>
+              <input class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" type="text" id="companyName" placeholder="MyBusiness">
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="">Description</label>
+          <input class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" type="text" id="description" placeholder="Write a description for your dataset">
+        </div>
+        
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="">Type of Data Needed</label>
+          <div class="relative">
+            <select class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" id="requiredData">
+              <option>Image</option>
+              <option>Text</option>
+              <option>Audio</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        </form>
+      
+        <div>
+          <div class="buttonArea">
+            <a class="inline-block py-3 px-5 mr-4 leading-none text-center text-yellow-600 bg-yellow-50 hover:bg-yellow-100 font-semibold rounded shadow" href="/">Back</a>
+            <a class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-yellow-400 hover:bg-yellow-500 font-semibold rounded shadow"id="submitRequest" onclick="submitForm()" href="#">Submit</a></div>
+        </div>
+      </div>
+      <footer class="p-4">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="w-full lg:w-auto lg:mr-auto text-center lg:text-left">© 2021 Hive</div>
+          <div class="flex justify-center items-center space-x-6 mt-4 lg:mt-0">
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

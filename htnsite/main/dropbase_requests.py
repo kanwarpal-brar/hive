@@ -2,7 +2,7 @@ import requests
 from time import sleep
 import json
 
-TOKEN = "3pRbuKcaKskkxmW9EEavpq"
+TOKEN = "INSERT_YOUR_TOKEN_HERE"
 
 def uploadViaPresignedURL(input_csv):
 	r = requests.post("https://api2.dropbase.io/v1/pipeline/generate_presigned_url", data={'token': TOKEN})
@@ -23,9 +23,9 @@ def uploadViaPresignedURL(input_csv):
 	return [job_id, presigned_url]
 
 def databaseQuery():
-	REST_API_Link = "https://query.dropbase.io/8FNdXUrN82TaZDks2p3YLc"
-	TABLE = "hive_deploy_table"
-	KEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhYmFzZUlkIjoiOEZOZFhVck44MlRhWkRrczJwM1lMYyIsImFjY2Vzc1Blcm0iOiJmdWxsIiwidG9rZW5JZCI6Ind1UEZjZE5Lc3JaMURVZ3BQWElzanc3QmpLR0dTdHZqTXpHNjREbndMRGRDbEtiRmxGaDc0OWxLV0t3RXVjbEsiLCJpYXQiOjE2MTA4NzQxMzQsImV4cCI6MTYxMDk2MDUzNCwiaXNzIjoiZHJvcGJhc2UuaW8iLCJzdWIiOiJjcHpUVVJqakhyVHY5amY4bVhtcGZzIn0.UHDIhRCarNhvyINfgSuEV5AD205kLcHsJFuRYyTblCc"
+	REST_API_Link = "INSERT_YOUR_REST_API_LINK_HERE"
+	TABLE = "INSERT_YOUR_TABLE_HERE"
+	KEY = "INSERT_YOUR_REST_AUTHORIZATION_KEY_HERE"
 
 	r = requests.get(REST_API_Link + '/' + TABLE, headers={"Authorization": KEY})
 

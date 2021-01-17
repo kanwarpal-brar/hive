@@ -1,4 +1,4 @@
-# hive
+# Hive
 Streamlined ML Data Collection Platform Powered by the Dropbase API
 
 # What It Does

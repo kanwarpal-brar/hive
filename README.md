@@ -1,5 +1,5 @@
 # Hive
-Streamlined ML Data Collection Platform Powered by the Dropbase API
+Streamlined ML Data Collection Platform Powered by the Dropbase API. It was made in a Team of four at Hack the North 2020, check out the Devpost [here](https://devpost.com/software/hive-streamlined-ml-data-collection)
 
 # What It Does
 Hive is a streamlined Machine Learning data collection platform. It aims to allow users to build Machine Learning datasets collaboratively and easily, so they can focus on the important parts of their project instead of having to get bogged down in trying to gather data. 
@@ -10,3 +10,5 @@ More specifically, when files are uploaded by a user, they are preprocessed acco
 
 # How It Works 
 Hive is a web app built using Django and Firebase, with the Tailwind CSS library used for front end styling. File uploading, preprocessing, and all related functions are handled through Python. All data is pushed to and retrieved from a Dropbase database, which is interfaced with through its API, using the Python requests module.
+
+
